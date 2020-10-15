@@ -1,0 +1,26 @@
+{
+  "name": "tansang",
+  "version": "1.0.0",
+  "description": "Vận tải tấn sang",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass scss/ -o css/",
+    "watch-css": "npm run build-css && node-sass scss/ -o css/ --watch",
+    "css-minify": "css-minify --dir css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanphan2512/VanTaiTanSang.git"
+  },
+  "author": "PhanNV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanphan2512/VanTaiTanSang/issues"
+  },
+  "homepage": "https://github.com/vanphan2512/VanTaiTanSang#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
