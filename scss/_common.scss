@@ -1,0 +1,24 @@
+
+.back-to-top {
+    position: fixed;
+    bottom: 55px;
+    right: 15px;
+    height: 40px;
+    width: 40px;
+    opacity: 0.6;
+    background: #9ea3ff;
+    color: #fff;
+    text-align: center;
+    z-index: 99999;
+    cursor: pointer;
+    i{
+        position: absolute;
+        top: 6px;
+        font-size: 27px;
+        width: 100%;
+        left: 0;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
