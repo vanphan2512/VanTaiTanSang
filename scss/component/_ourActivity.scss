@@ -1,0 +1,106 @@
+.our-activity{
+    background-image: url('../images/ourActivity/maintruckslider1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 330px;
+    height: 330px;
+    margin-bottom: 50px;
+    position: relative;
+    &::before{
+        content: "";
+        background-color: $bg-blue;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0.7;
+
+    }
+
+    .activity {
+        position: absolute;
+        z-index: 11;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 80%;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        .section-title{
+            width: 20%;
+            &::before{
+                display: none;
+            }
+            h3{
+                font-family: OpenSans_Semibold;
+                background: transparent;
+                border: 0;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+                line-height: 50px;
+                margin-top: -10px;
+            }
+        }
+        .section-content {
+            width: 78%;
+            .owl-carousel{
+                .owl-item{
+                    .item{
+                        text-align: center;
+                        position: relative;
+                        width: 97%;
+                        height: 250px;
+                        margin: 0 auto;
+                            img{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                width: fit-content;
+                            }
+                            h3{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                width: 100%;
+                                height: 50px;
+                                font-family: OpenSans_Semibold;
+                                font-size: 20px;
+                                color: $white;
+                                background: #00000096;
+                                line-height: 50px;
+                                text-align: left;
+                                padding-left: 10px;
+                                text-transform: uppercase;
+                            }
+                    }
+                }
+                .owl-controls{
+                    position: absolute;
+                    bottom: 25%;
+                    left: -25%;
+                    .owl-buttons{
+                        .owl-prev, .owl-next {
+                            border-radius: 4px;
+                            padding: 7px 15px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

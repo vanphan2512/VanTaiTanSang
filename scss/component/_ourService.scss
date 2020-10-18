@@ -1,0 +1,45 @@
+.our-services-item{
+    
+    .item{
+        margin-bottom: 30px;
+        .our-services-name{
+                font-family: OpenSans_Regular;
+                font-size: 20px;
+                margin-bottom: 20px;
+            .count-number{
+                color: $red;
+                
+            }
+            .title{
+                color: $black-4;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+        }
+        .our-services-img{
+            box-shadow: 0 0 7px #6f6868c7;
+            height: 220px;
+            text-align: center;
+            overflow: hidden;
+            max-height: 220px;
+            img{
+                height: 100%;
+                
+            }
+        }
+        .our-services-content{
+            p{
+                color: #aaa;
+                font-family: OpenSans_Regular;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+           .txt-read-more {
+                color: #0a1567;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,8 +1,15 @@
 @import "../vender/bootstrap/scss/bootstrap.scss";
 @import "../vender/font-awesome/scss/font-awesome.scss";
 
+@import "../vender/owlcarousel/css/default.owl.carousel.scss";
+@import "../vender/owlcarousel/css/owl.theme.scss";
+@import "../vender/owlcarousel/css/owl.carousel.scss";
 
+@import "./font";
+@import "./variables";
 @import "./common";
 @import "./component/header";  
 @import "./component/main"; 
 @import "./component/footer"; 
+@import "./component/main-slide"; 
+@import "./component/item"; 
