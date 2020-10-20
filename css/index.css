@@ -10083,7 +10083,7 @@ body {
       text-transform: uppercase;
       font-size: 18px; }
   .our-services-item .item .our-services-img {
-    box-shadow: 0 0 7px #6f6868c7;
+    box-shadow: 0 0 5px 2px #6f686854;
     height: 220px;
     text-align: center;
     overflow: hidden;
@@ -10106,8 +10106,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-height: 330px;
-  height: 330px;
+  min-height: 450px;
   margin-bottom: 50px;
   position: relative; }
   .our-activity::before {
@@ -10123,18 +10122,9 @@ body {
     margin: auto;
     opacity: 0.7; }
   .our-activity .activity {
-    position: absolute;
-    z-index: 11;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 80%;
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between; }
+    padding-top: 40px; }
     .our-activity .activity .section-title {
-      width: 20%; }
+      text-align: center; }
       .our-activity .activity .section-title::before {
         display: none; }
       .our-activity .activity .section-title h3 {
@@ -10145,46 +10135,55 @@ body {
         text-transform: uppercase;
         letter-spacing: .8px;
         line-height: 50px;
-        margin-top: -10px; }
-    .our-activity .activity .section-content {
-      width: 78%; }
-      .our-activity .activity .section-content .owl-carousel .owl-item .item {
-        text-align: center;
-        position: relative;
-        width: 97%;
-        height: 250px;
-        margin: 0 auto; }
-        .our-activity .activity .section-content .owl-carousel .owl-item .item img {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          width: fit-content; }
-        .our-activity .activity .section-content .owl-carousel .owl-item .item h3 {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          margin: auto;
-          width: 100%;
-          height: 50px;
-          font-family: OpenSans_Semibold;
-          font-size: 20px;
-          color: #fff;
-          background: #00000096;
-          line-height: 50px;
-          text-align: left;
-          padding-left: 10px;
-          text-transform: uppercase; }
-      .our-activity .activity .section-content .owl-carousel .owl-controls {
+        width: 100%; }
+    .our-activity .activity .section-content .owl-carousel .owl-item .item {
+      text-align: center;
+      position: relative;
+      width: 97%;
+      height: 250px;
+      margin: 0 auto; }
+      .our-activity .activity .section-content .owl-carousel .owl-item .item img {
         position: absolute;
-        bottom: 25%;
-        left: -25%; }
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: fit-content;
+        height: 100%; }
+      .our-activity .activity .section-content .owl-carousel .owl-item .item h3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 50px;
+        font-family: OpenSans_Semibold;
+        font-size: 20px;
+        color: #fff;
+        background: #00000096;
+        line-height: 50px;
+        text-align: left;
+        padding-left: 10px;
+        text-transform: uppercase; }
+    .our-activity .activity .section-content .owl-carousel .owl-controls {
+      margin-top: 10px;
+      text-align: center;
+      position: absolute;
+      top: 30%;
+      width: 100%; }
+      .our-activity .activity .section-content .owl-carousel .owl-controls .owl-buttons {
+        position: relative; }
+        .our-activity .activity .section-content .owl-carousel .owl-controls .owl-buttons .owl-prev {
+          left: 20px; }
+        .our-activity .activity .section-content .owl-carousel .owl-controls .owl-buttons .owl-next {
+          right: 20px; }
         .our-activity .activity .section-content .owl-carousel .owl-controls .owl-buttons .owl-prev, .our-activity .activity .section-content .owl-carousel .owl-controls .owl-buttons .owl-next {
           border-radius: 4px;
-          padding: 7px 15px; }
+          padding: 3px 20px;
+          position: absolute;
+          font-size: 25px; }
 
 .section-title {
   position: relative;

@@ -99,7 +99,7 @@ $(document).ready(function () {
         navigationText: ['<i class="fa fa-caret-left" aria-hidden="true"></i>', '<i class="fa fa-caret-right" aria-hidden="true"></i>']
     });
     $("#home-ourActivity-slider").owlCarousel({
-        items: 2,
+        items: 3,
         itemsDesktop: [992, 2],
         itemsDesktopSmall: [992, 1],
         itemsTablet: [768, 1],
