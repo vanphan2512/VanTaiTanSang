@@ -140,6 +140,9 @@ footer {
     }
     .menu-footer{
         margin-top: 45px;
+        @media (max-width: 992px){
+            margin-top: 10px; 
+        }
         h3{
             position: relative;
             @media (max-width: 992px) {
@@ -203,6 +206,10 @@ footer {
     }
     .menu-footer-one{
         position: relative;
+        @media (max-width: 992px) {
+            display: flex;
+            justify-content: center;
+        }
         .logo-footer{
             
             @media (max-width: 992px) {
@@ -210,6 +217,7 @@ footer {
                 float: left;
                 width: 30%;
                 line-height: 75px;
+                margin-top: 20px;
                 -webkit-transition: all 1s ease;
                 -moz-transition: all 1s ease;
                 transition: all 1s ease;

@@ -8,6 +8,10 @@
     }
     .header-top {
         padding: 15px 0px 10px;
+        @media (max-width: 992px) { 
+            clear: both;
+            display: none;
+        }
         .header-top-contact{
             text-align: left;
             @media (max-width: 992px) { 
@@ -20,9 +24,25 @@
                 text-align: center;
             }
         }
+        .header-top-left{
+            .logo{
+                clear: both;
+                
+            }
+        }
         .header-top-right{
             display: flex;
             justify-content: flex-end;
+            
+            .logo{
+                clear: both;
+                display: none;
+                @media (max-width: 992px) { 
+                    clear: both;
+                    display: block;
+                }
+            }
+
             ul {
                 margin: 0px;
                 padding-left: 0;
@@ -30,6 +50,7 @@
                 margin-right: auto;
                 display: flex;
                 justify-content: flex-end;
+               
                 li{
                     clear: both;
                     list-style: none;
@@ -120,28 +141,42 @@
     background-image: url('../images/bg-menu.jpg');
     background-position: left center;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 45px;
+    background-size: cover;
+    height: 44px;
     line-height: 40px;
+    
+    @media (max-width: 1200px) {
+        height: 35px;
+        line-height: 35px;
+    }
+
     @media (max-width: 992px) { 
         position: relative;
+        background: transparent;
+        height: auto;
+        line-height: initial;
     }
    
     .btn-menu-mobile{
         display: none;
         opacity: 0;
         overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        line-height: 50px;
+        overflow: auto;
+        font-size: 25px;
+        color: #474747ba; 
+        z-index: 99;
+        &:focus{
+            outline: none;
+            border: none;
+        }
         @media (max-width: 992px) { 
             display: block;
             opacity: 1;
-            font-size: 25px;
-            color: #474747ba;
-            overflow: auto;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            line-height: 50px;
             .navbar-toggler-icon{
                 height: auto;
             }
@@ -161,13 +196,13 @@
                 justify-content: flex-end;
                 .menu-item{
                     float: left;
-                    height: 45px;
+                    height: 44px;
                     a{
                         font-family: Myriad-Pro-Regular;
                         font-size: 15px;
                         display: block;
-                        height: 45px;
-                        line-height: 45px;
+                        height: 44px;
+                        line-height: 44px;
                         text-transform: capitalize;
                         color: $white;
                         text-decoration: none;
@@ -178,16 +213,19 @@
                         -webkit-transition: all 0.3s ease;
                         -moz-transition: all 0.3s ease;
                         transition: all 0.3s ease;
-                        @media (min-width: 992px) {
-                            webkit-transition: all 1s ease;
-                            -moz-transition: all 1s ease;
-                            transition: all 1s ease;
+                        
+                      
+                        @media (max-width: 1370px) {
+                            margin: 0 5px;
+                            padding: 0 5px;
+                            font-size: 14px;
                         }
-                        @media (min-width: 1200px) {
-                          
-                            webkit-transition: all 1s ease;
-                            -moz-transition: all 1s ease;
-                            transition: all 1s ease;
+                        @media (max-width: 1200px) {
+                            margin: 0 3px;
+                            padding: 0 5px;
+                            font-size: 12px;
+                            height: 35px;
+                            line-height: 35px;
                         }
                         &:hover{
                             background: #00000052;
@@ -315,6 +353,21 @@
             }
         }
     }
+    .header-mobile {
+        height: 80px;
+        display: none;
+        position: relative;
+
+        @media (max-width: 992px) { 
+            display: block;
+        }
+        .logo-mobile {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+    }
 }
 
 // menu mobile
@@ -434,9 +487,10 @@ body{
                 margin: 0;
                 visibility: hidden;
                 overflow: hidden;
-                transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
                 -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
+                // transition: all 700ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+                padding-left: 10px;
                 .has-sub-sub{
                     .megamenu-menu-sub{
                         a{
@@ -477,10 +531,17 @@ body{
                                 display: block;
                                 padding-left: 10px;
                                 visibility: visible;
-                                transition: all 700ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+                                // transition: all 700ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+                                clear: both;
                                 .menu-item{
                                     padding: 5px 0;
-                                    
+                                    a{
+                                        &.menu-item-link{
+                                            &::after{
+                                                content: '';
+                                            }
+                                        }
+                                    }
                                     &.has-sub-sub{
                                         .megamenu-menu-sub{
                                             display: none;
@@ -530,6 +591,7 @@ body{
                                                     visibility: visible;
                                                     transition: all 700ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
                                                     a{
+                                                        clear: both;
                                                         &::after{
                                                             content: '';
                                                         }

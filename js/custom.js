@@ -79,8 +79,8 @@ $(document).ready(function () {
         navigation: true,
         pagination: false,
         slideSpeed: 1000,
-        paginationSpeed: 1000,
-        autoPlay: 5000,
+       // paginationSpeed: 1000,
+       // autoPlay: 5000,
         navigationText: ['<i class="fa fa-caret-left" aria-hidden="true"></i>', '<i class="fa fa-caret-right" aria-hidden="true"></i>']
     });
     $("#home-brand-slider").owlCarousel({
