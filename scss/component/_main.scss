@@ -14,6 +14,9 @@
         top: 19px;
         left: 0;
         z-index: -1;
+        @media (max-width: 992px){
+            top: 12px;
+        }
     }
     h3{
         font-family: OpenSans_Semibold;
@@ -21,6 +24,9 @@
         background: $white;
         width: fit-content;
         text-transform: uppercase;
+        @media (max-width: 992px){
+            font-size: 20px;
+        }
     }
 }
 

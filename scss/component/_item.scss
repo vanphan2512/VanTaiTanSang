@@ -4,6 +4,7 @@
         border-radius: 4px;
         padding: 5px 15px;
         box-shadow: 0 0 9px 0px #928c8c80;
+        margin-bottom: 30px;
         h3{
             margin-top: 20px;
             margin-bottom: 20px;
@@ -11,13 +12,18 @@
             font-family: OpenSans_Semibold;
             color: $black-4;
             text-transform: uppercase;
-            
+            @media (max-width: 992px){
+                font-size: 20px;
+            }
         }
         p{
             color: $gray-a;
             font-family: OpenSans_Regular;
             font-size: 15px;
             letter-spacing: 0.5px;
+            @media (max-width: 992px){
+                font-size: 12px;
+            }
         }
         &:hover{
            h3{
@@ -49,7 +55,9 @@
                 font-family: OpenSans_Semibold;
                 color: $black-4;
                 text-transform: uppercase;
-                
+                @media (max-width: 992px){
+                    font-size: 15px;
+                }
             }
             p{
                 color: $gray-a;
@@ -57,6 +65,9 @@
                 font-size: 13px;
                 letter-spacing: 0.5px;
                 margin-bottom: 5px;
+                @media (max-width: 992px){
+                    font-size: 12px;
+                }
             }
             .txt-read-more{
                 color: $c-blue;
@@ -80,7 +91,9 @@
                 font-family: OpenSans_Semibold;
                 color: $black-4;
                 text-transform: uppercase;
-                
+                @media (max-width: 992px){
+                    font-size: 15px;
+                }
             }
             p{
                 color: $gray-a;
@@ -88,6 +101,9 @@
                 font-size: 13px;
                 letter-spacing: 0.5px;
                 margin-bottom: 5px;
+                @media (max-width: 992px){
+                    font-size: 12px;
+                }
             }
             .txt-read-more{
                 color: $c-blue;

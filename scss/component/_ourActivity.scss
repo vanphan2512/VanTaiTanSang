@@ -74,6 +74,9 @@
                                 text-align: left;
                                 padding-left: 10px;
                                 text-transform: uppercase;
+                                @media (max-width: 992px){
+                                    font-size: 15px;
+                                }
                             }
                     }
                 }

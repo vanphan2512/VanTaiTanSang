@@ -9886,7 +9886,14 @@ img {
   .header-center .header-mobile {
     height: 80px;
     display: none;
-    position: relative; }
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    padding-bottom: 90px;
+    background: white;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 2px 11px 1px #000000ab; }
     @media (max-width: 992px) {
       .header-center .header-mobile {
         display: block; } }
@@ -9894,7 +9901,7 @@ img {
       text-align: center;
       display: flex;
       justify-content: center;
-      padding-top: 10px; }
+      padding-top: 15px; }
 
 body {
   position: relative; }
@@ -9903,18 +9910,19 @@ body {
     will-change: transform;
     display: none;
     position: fixed;
-    overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     top: 0;
     width: 300px;
     height: 100%;
-    background: linear-gradient(to right, rgba(184, 188, 255, 0.85), rgba(252, 201, 249, 0.85));
+    background: linear-gradient(to right, #142165, #182159b8);
     padding: 0px;
     z-index: 10;
     left: -300px;
     border-left: 1px solid #e9e9e9;
-    transition: all 1.5s cubic-bezier(0.46, 0.01, 0.32, 1); }
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     body .menu-mobile .btn-close-menu {
       position: relative; }
       body .menu-mobile .btn-close-menu button {
@@ -9924,7 +9932,7 @@ body {
         background: transparent;
         box-shadow: none;
         border: 0;
-        color: #8b8888;
+        color: #fff;
         width: 30px;
         height: 30px;
         padding: 0;
@@ -9933,13 +9941,9 @@ body {
       margin-top: 30px;
       text-align: center; }
       body .menu-mobile .logo-mobile a {
-        font-family: "Calligraffitti_Regular";
-        font-size: 40px;
-        font-style: italic;
-        line-height: 85px;
-        color: #894545;
-        text-decoration: none;
-        cursor: pointer; }
+        clear: both; }
+        body .menu-mobile .logo-mobile a img {
+          clear: both; }
     body .menu-mobile .mobile-nav-search {
       margin-bottom: 30px; }
       body .menu-mobile .mobile-nav-search .search-bar {
@@ -10010,7 +10014,7 @@ body {
         font-family: FontAwesome;
         position: absolute;
         right: 0;
-        color: #777777;
+        color: #fff;
         font-size: 12px;
         vertical-align: middle;
         text-align: center;
@@ -10020,7 +10024,7 @@ body {
         font-family: FontAwesome;
         position: absolute;
         right: 0;
-        color: #777777;
+        color: #fff;
         font-size: 12px;
         vertical-align: middle;
         text-align: center;
@@ -10060,7 +10064,7 @@ body {
             font-family: FontAwesome;
             position: absolute;
             right: 0;
-            color: #777777;
+            color: #fff;
             font-size: 12px;
             vertical-align: middle;
             text-align: center;
@@ -10085,13 +10089,15 @@ body {
     z-index: 1;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    z-index: 100; }
   body.sidebar-open .header-center .menu-mobile {
     display: block;
     z-index: 9999;
-    -ms-transform: translateX(300px);
-    -webkit-transform: translateX(300px);
-    transform: translateX(300px); }
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
   body.sidebar-open .header-center .menu-top {
     display: none; }
     body.sidebar-open .header-center .menu-top nav .navbar-nav {
@@ -10215,6 +10221,9 @@ body {
         text-align: left;
         padding-left: 10px;
         text-transform: uppercase; }
+        @media (max-width: 992px) {
+          .our-activity .activity .section-content .owl-carousel .owl-item .item h3 {
+            font-size: 15px; } }
     .our-activity .activity .section-content .owl-carousel .owl-controls {
       margin-top: 10px;
       text-align: center;
@@ -10245,12 +10254,18 @@ body {
     top: 19px;
     left: 0;
     z-index: -1; }
+    @media (max-width: 992px) {
+      .section-title::before {
+        top: 12px; } }
   .section-title h3 {
     font-family: OpenSans_Semibold;
     font-size: 30px;
     background: #fff;
     width: fit-content;
     text-transform: uppercase; }
+    @media (max-width: 992px) {
+      .section-title h3 {
+        font-size: 20px; } }
 
 .homepage .our-services {
   margin-top: 50px; }
@@ -10508,33 +10523,68 @@ footer {
 
 .main-slider {
   margin-top: -5px; }
+  @media (max-width: 992px) {
+    .main-slider {
+      margin-top: 90px; } }
   .main-slider .service-new {
     margin-top: -50px; }
+    @media (max-width: 767px) {
+      .main-slider .service-new {
+        margin-top: -25px; } }
 
 .owl-home-main-slider {
   position: relative; }
   .owl-home-main-slider .owl-item .item {
     position: relative; }
+    @media (max-width: 575px) {
+      .owl-home-main-slider .owl-item .item .item-image img {
+        height: 230px; } }
+    @media (max-width: 430px) {
+      .owl-home-main-slider .owl-item .item .item-image img {
+        height: 200px; } }
     .owl-home-main-slider .owl-item .item .content {
       position: absolute;
       z-index: 99;
       top: 25%;
       left: 150px;
       margin: 0 auto; }
+      @media (max-width: 992px) {
+        .owl-home-main-slider .owl-item .item .content {
+          left: 0;
+          width: 100%;
+          text-align: center; } }
+      @media (max-width: 767px) {
+        .owl-home-main-slider .owl-item .item .content {
+          display: none; } }
       .owl-home-main-slider .owl-item .item .content .titie {
         width: 350px;
         color: #fff;
         font-size: 20px;
         margin-bottom: 20px; }
+        @media (max-width: 992px) {
+          .owl-home-main-slider .owl-item .item .content .titie {
+            width: auto;
+            margin-bottom: 20px; } }
       .owl-home-main-slider .owl-item .item .content p {
         width: 500px;
         font-size: 13px;
         color: #aaa;
         margin-bottom: 20px; }
+        @media (max-width: 992px) {
+          .owl-home-main-slider .owl-item .item .content p {
+            width: 50%;
+            margin: 0 auto 20px; } }
   .owl-home-main-slider .owl-controls .owl-buttons {
     position: absolute;
     top: 15%;
     left: 150px; }
+    @media (max-width: 992px) {
+      .owl-home-main-slider .owl-controls .owl-buttons {
+        top: 40%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; } }
     .owl-home-main-slider .owl-controls .owl-buttons .owl-prev, .owl-home-main-slider .owl-controls .owl-buttons .owl-next {
       border-radius: 4px;
       padding: 7px 15px; }
@@ -10559,7 +10609,8 @@ footer {
   background: #fff;
   border-radius: 4px;
   padding: 5px 15px;
-  box-shadow: 0 0 9px 0px #928c8c80; }
+  box-shadow: 0 0 9px 0px #928c8c80;
+  margin-bottom: 30px; }
   .welcome .item h3 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -10567,11 +10618,17 @@ footer {
     font-family: OpenSans_Semibold;
     color: #444;
     text-transform: uppercase; }
+    @media (max-width: 992px) {
+      .welcome .item h3 {
+        font-size: 20px; } }
   .welcome .item p {
     color: #aaa;
     font-family: OpenSans_Regular;
     font-size: 15px;
     letter-spacing: 0.5px; }
+    @media (max-width: 992px) {
+      .welcome .item p {
+        font-size: 12px; } }
   .welcome .item:hover h3 {
     color: #000; }
 
@@ -10594,12 +10651,18 @@ footer {
     font-family: OpenSans_Semibold;
     color: #444;
     text-transform: uppercase; }
+    @media (max-width: 992px) {
+      .service .item .content h3 {
+        font-size: 15px; } }
   .service .item .content p {
     color: #aaa;
     font-family: OpenSans_Regular;
     font-size: 13px;
     letter-spacing: 0.5px;
     margin-bottom: 5px; }
+    @media (max-width: 992px) {
+      .service .item .content p {
+        font-size: 12px; } }
   .service .item .content .txt-read-more {
     color: #0a1567;
     font-size: 12px; }
@@ -10614,12 +10677,18 @@ footer {
     font-family: OpenSans_Semibold;
     color: #444;
     text-transform: uppercase; }
+    @media (max-width: 992px) {
+      .our-services-item .item .content h3 {
+        font-size: 15px; } }
   .our-services-item .item .content p {
     color: #aaa;
     font-family: OpenSans_Regular;
     font-size: 13px;
     letter-spacing: 0.5px;
     margin-bottom: 5px; }
+    @media (max-width: 992px) {
+      .our-services-item .item .content p {
+        font-size: 12px; } }
   .our-services-item .item .content .txt-read-more {
     color: #0a1567;
     font-size: 12px; }
