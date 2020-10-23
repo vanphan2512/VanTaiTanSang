@@ -1,0 +1,152 @@
+.rectuitment{
+    margin-top: 40px;
+    h3{
+        font-family: OpenSans_Semibold;
+        font-size: 26px;
+        color: $black-4;
+        text-transform: uppercase;
+        margin-top: 15px;
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+    .post-date{
+        color: $c-gray;
+        font-size: 10px;
+        font-family: OpenSans_Regular;
+        padding-bottom: 10px;
+    }
+    .image-item{
+        clear: both;
+        position: relative;
+        .content-Image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+            padding-left: 50px;
+            .title{
+                clear: both;
+                margin-top: 40px;
+                font-family: OpenSans_Regular;
+                font-size: 15px;
+                color: $white;
+            }
+            h3{
+                font-family: OpenSans_Semibold;
+                font-size: 20px;
+                color: $white;
+                text-transform: uppercase;
+                margin-top: 15px;
+                @media (max-width: 767px) {
+                    font-size: 15px;
+                }
+            }
+            ul{
+                padding-left: 0;
+                &.range-salary{
+                    width: 120px;
+                    border-radius: 4px;
+                    box-shadow: 0 0 7px 1px #0000007a;
+                    background-color: $white;
+                    margin-top: 30px;
+                    position: relative;
+                    padding: 5px 10px;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        border: 1px dashed $c-gray;
+                        top: 0;
+                        left: 0;
+                        width: 94%;
+                        height: 94%;
+                        margin: auto;
+                        right: 0;
+                        bottom: 0;
+
+                    }
+                    li{
+                        list-style: none;
+                        color: $c-blue;
+                        text-align: center;
+                        &.salary{
+                            font-family: OpenSans_Semibold;
+                            font-size: 20px;
+                            color: $red;
+                        }
+                    }
+                }
+                &.location{
+                    clear: both;
+                    position: absolute;
+                    bottom: 0;
+                    li{
+                        list-style: none;
+                        color: $white;
+                        font-family: OpenSans_Semibold;
+                        font-size: 15px;
+                        i{
+                            
+                        }
+                        .txt{
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(#091567bd), to(#ffffff29));
+            background-image: -webkit-linear-gradient(left, #091567bd, #ffffff29);
+            background-image: -o-linear-gradient(left, #091567bd, #ffffff29);
+            background-image: linear-gradient(to right, #091567bd, #ffffff29);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(#09156747), to(#ffffff29));
+            background-image: -webkit-linear-gradient(left, #09156747, #ffffff29);
+            background-image: -o-linear-gradient(left, #09156747, #ffffff29);
+            background-image: linear-gradient(to left, #09156747, #ffffff29);
+        }
+    }
+    .content{
+        margin-top: 30px;
+        h3{
+            font-family: OpenSans_Semibold;
+            font-size: 15px;
+            color: $black-4;
+            text-transform: uppercase;
+            margin-top: 15px;
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
+        }
+        ul{
+            padding-left: 20px;
+            li{
+                list-style: none;
+                color: $c-gray;
+                font-size: 13px;
+                font-family: OpenSans_Regular;
+            }
+        }
+        p{
+            padding-left: 20px;
+            list-style: none;
+            color: $c-gray;
+            font-size: 13px;
+            font-family: OpenSans_Regular;
+        }
+    }
+}
