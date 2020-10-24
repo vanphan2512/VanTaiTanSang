@@ -8,3 +8,37 @@
         color: $white;
     }
 }
+
+.contact-form{
+    form{
+        margin-top: 30px;
+        .form-row{
+            margin-bottom: 20px;
+            input{
+                background-color: $b-gray;
+                font-size: 15px;
+            }
+            textarea{
+                background-color: $b-gray;
+                font-size: 15px;
+            }
+            .form-control{
+                &:focus{
+                    box-shadow: none;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    .btn-submit{
+        background-color: $b-red;
+        font-family: OpenSans_Regular;
+        color: $white;
+        font-size: 15px;
+        width: 100%;
+        text-transform: uppercase;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
